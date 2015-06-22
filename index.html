@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Material design menu button</title>
+
+
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="button.css" rel="stylesheet">
+
+<style>
+
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,700,500");
+
+
+body {
+  color: #6F7B8A;
+  font-size: 16px;
+  background-color: #F2F6F7;
+  background-color: #E5E9EC;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  font-family: "Roboto", sans-serif; }
+
+a {
+  color: #015876; }
+
+a:hover, a:active, a:focus {
+  outline: 0;
+  text-decoration: none; }
+
+small, strong {
+  font-weight: 700; }
+
+h1 {
+  font-size: 35px;
+  color: #282323;
+  font-weight: 300; }
+  h1 small, h1 strong {
+    color: #6F7B8A;
+    font-weight: 700; }
+
+</style>
+
+</head>
+<body>
+
+
+
+<div class="col-sm-6 col-sm-offset-3" style="text-align:center;margin-top:10%;">
+<h1>Material design menu button</h1>
+
+<p>
+MIT License <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a><br />
+Copyright (c) 2015 Pawel Jankowski, <a href="http://78points.com">78points.com</a>
+</p>
+
+</div>	
+
+
+
+
+
+<!-- material btn -->
+<div id="action_btn_holder" class="action_btn_holder">
+
+<a href="#" id="actionButton" class="action_btn action_btn_main action_btn_shadow"><div class="action_btn_plus">+</div></a>
+
+<ul class="action_btn_child">
+<li id="btn-1" class="action_btn" data-toggle="tooltip" data-placement="left" title="Button 1">
+	<a href="#">
+	<i class="fa fa-sign-in"></i>
+	</a>
+</li>
+
+<li id="btn-2" class="action_btn" data-toggle="tooltip" data-placement="left" title="Button 2">
+	<a href="#">
+	<i class="fa fa-pencil-square-o"></i>
+	</a>
+</li>	
+
+<li id="btn-3" class="action_btn" data-toggle="tooltip" data-placement="left" title="Button 3">
+	<a href="#">
+	<i class="fa fa-check-square-o"></i>
+	</a>
+</li>	
+</ul>
+
+</div><!-- action_btn_holder-->
+
+
+<!-- material btn -->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script>
+//tooltip
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+//material btn
+$( "#action_btn_holder" ).hover(
+  function() {
+	  $( this ).css('height', '270px');
+	  $( "#actionButton .action_btn_plus", this ).addClass('btn_rotate');
+ 	  $( "#btn-1" ).animate({ bottom: "100",}, 500);
+	  $( "#btn-2" ).animate({ bottom: "165",}, 500);
+	  $( "#btn-3" ).animate({ bottom: "230",}, 500);
+	  $( "#btn-1" ).addClass('action_btn_shadow');
+	  $( "#btn-2" ).addClass('action_btn_shadow');
+	  $( "#btn-3" ).addClass('action_btn_shadow');	
+  }, function() {
+	  $( this ).css('height', '60px');
+	  $( "#actionButton .action_btn_plus", this  ).removeClass('btn_rotate');
+ 	  $( "#btn-1" ).animate({ bottom: "30",}, 500);
+	  $( "#btn-2" ).animate({ bottom: "30",}, 500);
+	  $( "#btn-3" ).animate({ bottom: "30",}, 500);  
+	  $( "#btn-1" ).removeClass('action_btn_shadow');
+	  $( "#btn-2" ).removeClass('action_btn_shadow');
+	  $( "#btn-3" ).removeClass('action_btn_shadow');
+  }
+);
+
+</script>
+
+
+</body>
+</html>
