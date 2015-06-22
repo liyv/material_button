@@ -3,7 +3,7 @@
 Demo: http://78points.com/material_button/
 
 
-### MIT License <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>
+MIT License <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the
